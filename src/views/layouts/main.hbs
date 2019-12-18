@@ -1,12 +1,12 @@
 <form method="POST">
 <input
-name= 'username' 
+name= 'username'
 id='createusername'
 class='entry'
 aria-label="enter your name"
 placeholder='name here'
-required 
-/> 
+required
+/>
  {{!-- create input for password when we get there strech goaL --}}
 
 
@@ -22,13 +22,29 @@ required
  </select>
  </label>
 
- 
+ {{#each questions}}
+
+ <p>{{question}}</p>
+ <input
+ name= {{name}}
+ type= 'radio'
+ aria-label="Yes"
+ value=1
+ required
+ />
+ <input
+ name= {{name}}
+ type= 'radio'
+ aria-label="No"
+ value=2
+ required
+ />
+ {{/each}}
+
+
 
 
 
 
 
 </form>
-
-
-

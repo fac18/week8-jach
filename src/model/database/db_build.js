@@ -1,5 +1,5 @@
 const fs = require("fs");
-const dbConnection = require("./db_connection");
+const dbConnection = require("./dbConnection");
 const sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
 
 //query method comes from Pool class

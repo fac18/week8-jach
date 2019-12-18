@@ -1,50 +1,21 @@
-<form method="POST">
-<input
-name= 'username'
-id='createusername'
-class='entry'
-aria-label="enter your name"
-placeholder='name here'
-required
-/>
- {{!-- create input for password when we get there strech goaL --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{head}}
+</head>
+
+<body>
+    <main class="main">
+        {{{body}}}
+    </main>
+
+    <footer>
+
+        {{> footer}}
+    </footer>
 
 
+</body>
 
-
-<label for='category' name='category'>
-    Search by category
- <select class="category" name="category" required>
- <option value="sports"> Sports </option>
- <option value="food"> Food </option>
- <option value="technology"> technology </option>
- <option value="education"> education </option>
- </select>
- </label>
-
- {{#each questions}}
-
- <p>{{question}}</p>
- <input
- name= {{name}}
- type= 'radio'
- aria-label="Yes"
- value=1
- required
- />
- <input
- name= {{name}}
- type= 'radio'
- aria-label="No"
- value=2
- required
- />
- {{/each}}
-
-
-
-
-
-
-
-</form>
+</html>

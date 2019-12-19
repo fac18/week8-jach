@@ -51,7 +51,6 @@ router.post("/create-user", (req, res) => {
 });
 router.get("/presents", (req, res) => {
   console.log("we're getting data");
-  DONTEXIST();
 
   getData()
     .then(users => res.render("presents", { users }))

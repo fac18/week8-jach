@@ -2,9 +2,11 @@ const express = require("express");
 const router = express.Router();
 const behaviour = require("./behaviour");
 
+const parse = require("body-parser");
 const index = require("./../model/index");
 const questionsList = index.questions;
 const postData = index.formPost;
+const getData = index.getUsers;
 
 router.get("/", (req, res) => {
   res.render("home", { questions: questionsList });
@@ -37,6 +39,15 @@ router.post("/create-user", (req, res) => {
     behaviour: goodOrBad,
     category: req.body.category
   });
+});
+router.get("/presents", (req, res) => {
+  console.log("we're getting data");
+
+  getData()
+    .then(users => res.render("presents", { users }))
+    .catch(err => {
+      throw err;
+    });
 });
 
 module.exports = router;

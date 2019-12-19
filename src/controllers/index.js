@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 console.log("I am here");
 
 router.post("/create-user", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const questionsArray = [
     req.body.q1,
     req.body.q2,
@@ -38,8 +38,17 @@ router.post("/create-user", (req, res) => {
     name: req.body.username,
     behaviour: goodOrBad,
     category: req.body.category
-  });
+  }).then(responseDb => {
+    res.redirect('/presents');
+  }).catch(error => {
+    throw error;
+  }); 
+
+  // res.redirect('/presents');
+
 });
+
+
 router.get("/presents", (req, res) => {
   console.log("we're getting data");
 

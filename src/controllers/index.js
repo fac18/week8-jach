@@ -9,11 +9,13 @@ router.get("/", (req, res) => {
   res.render("home", { questions: questionsList });
 });
 
+console.log("I am here");
+
 router.post("/create-user", (req, res) => {
-  console.log("I am here");
-  postData(stufftosend, (err, res) => {
-    if (err) throw err;
-    else res.render("home", { stufffromdatabase });
+  console.log(req.body);
+  postData({
+    name: req.body.username,
+    category: req.body.category
   });
 });
 

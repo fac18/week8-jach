@@ -27,7 +27,9 @@ router.post("/create-user", (req, res) => {
 
 router.get("/presents", (req, res) => {
   console.log("we're getting data");
+
   getData();
+  res.render("presents");
 });
 
 module.exports = router;

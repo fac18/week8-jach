@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const behaviour = require("./behaviour");
+const error = require("./error");
 
 const parse = require("body-parser");
 const index = require("./../model/index");
@@ -50,6 +51,7 @@ router.post("/create-user", (req, res) => {
 });
 router.get("/presents", (req, res) => {
   console.log("we're getting data");
+  DONTEXIST();
 
   getData()
     .then(users => res.render("presents", { users }))
@@ -57,5 +59,8 @@ router.get("/presents", (req, res) => {
       throw err;
     });
 });
+
+router.use(error.client);
+router.use(error.server);
 
 module.exports = router;

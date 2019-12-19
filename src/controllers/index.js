@@ -47,8 +47,13 @@ router.post("/create-user", (req, res) => {
   // res.redirect('/presents');
 
 });
+<<<<<<< HEAD
+
+||||||| merged common ancestors
+=======
 
 
+>>>>>>> master
 router.get("/presents", (req, res) => {
   console.log("we're getting data");
 

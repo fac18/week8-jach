@@ -27,7 +27,6 @@ router.post("/create-user", (req, res) => {
 
 router.get("/presents", (req, res) => {
   console.log("we're getting data");
-  console.log(getData);
   getData();
 });
 

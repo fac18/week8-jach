@@ -1,5 +1,5 @@
 module.exports = [
-  { question: "Have you given to charity this past year?", name: "q2" },
+  { question: "Have you given to charity this past year?", name: "q1" },
   {
     question: "Have you made coffee or tea for your fellow FACers?",
     name: "q2"

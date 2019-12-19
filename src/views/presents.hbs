@@ -1,1 +1,19 @@
-<h2>this page exists</h2>
+<table>
+    <tr>
+        
+        
+        <th>name</th>
+        
+        <th>present</th>
+        <th>behaviour</th>
+
+    </tr>
+    {{#each users}}
+    
+    <tr>
+        <td> {{name}} </td>
+        <td> {{category}} </td>
+        <td> {{behaviour}} </td>
+    </tr>
+    {{/each}}
+</table>

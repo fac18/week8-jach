@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" action="/create-user">
   <input name='username' id='createusername' class='entry' aria-label="enter your name" placeholder='name here'
     required />
   {{!-- create input for password when we get there strech goaL --}}
@@ -19,9 +19,14 @@
   {{#each questions}}
 
   <p>{{question}}</p>
-  <input name={{name}} type='radio' aria-label="Yes" value=1 required />
-  <input name={{name}} type='radio' aria-label="No" value=2 required />
+  <input name={{name}} type='radio' aria-label="Yes" value=1 required>Yes</input>
+  <input name={{name}} type='radio' aria-label="No" value=0 required>No</input>
   {{/each}}
+
+  <br>
+  <br>
+
+  <input type="submit" aria-label="submit button" />
 
 
 

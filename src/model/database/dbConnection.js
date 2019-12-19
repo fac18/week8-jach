@@ -3,7 +3,7 @@ const url = require("url");
 require("env2")(".env");
 
 if (!process.env.DATABASE_URL)
-  throw new Error("Environment variable DB_URL must be set");
+  throw new Error("Environment variable DATABASE_URL must be set");
 
 const params = url.parse(process.env.DATABASE_URL);
 const [username, password] = params.auth.split(":");

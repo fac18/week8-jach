@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const behaviour = require("./behaviour");
+const behaviour = require("./util/behaviour");
 const { deleteUser } = require("./deleteUser");
 const error = require("./error");
 

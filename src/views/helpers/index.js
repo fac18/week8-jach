@@ -1,3 +1,4 @@
 module.exports = {
-  goodBad: require("./goodBad")
+  goodBad: require("./goodBad"),
+  capitaliseFirstLetter: require("./uppercaseFirstLetter")
 };

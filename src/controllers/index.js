@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const behaviour = require("./util/behaviour");
+const { deleteUser } = require("./deleteUser");
 const error = require("./error");
 
 const parse = require("body-parser");
@@ -49,6 +50,7 @@ router.post("/create-user", (req, res) => {
 
   // res.redirect('/presents');
 });
+
 router.get("/presents", (req, res) => {
   console.log("we're getting data");
 
@@ -57,7 +59,10 @@ router.get("/presents", (req, res) => {
     .catch(err => {
       throw err;
     });
+  console.log("we're getting data4");
 });
+
+router.get("/delete-user/:name", deleteUser);
 
 router.use(error.client);
 router.use(error.server);

@@ -24,7 +24,18 @@ test("tape is working", t => {
       .expect(404)
       .end((err,res)=>{
      t.error(err);
-     t.deepEqual(res.statusCode, 404 , "/bbullshit should load with a 404")
+     t.deepEqual(res.statusCode, 404 , "/bullshit should load with a 404")
      t.end();
       })
   })
+
+  test('/presents should return a 404' , t =>{
+    request(app)
+    .get('/presents')
+    .expect(200)
+    .end((err,res)=>{
+   t.error(err);
+   t.deepEqual(res.statusCode, 200 , "/presents should load a 200")
+   t.end();
+    })
+})

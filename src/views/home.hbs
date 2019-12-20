@@ -1,11 +1,11 @@
 <form method="POST" action="/create-user">
-  <input name='username' id='createusername' class='entry' aria-label="enter your name" placeholder='name here'
-    required />
+  <h1>Santa, what will I get for X-mas?</h1>
+  <input class="name" name='username' id='createusername' class='entry' aria-label="enter your name" placeholder='name here' required />
   {{!-- create input for password when we get there strech goaL --}}
 
 
-  <label for='category' name='category'>
-    Search by category
+  <label class="dropdown" for='category' name='category'>
+    <p class="searchBy">Search by category </p>
     <select class="category" name="category" required>
       <option value="Sports"> Sports </option>
       <option value="Food"> Food </option>
@@ -15,16 +15,18 @@
   </label>
 
   {{#each questions}}
-
-  <p>{{question}}</p>
-  <input name={{name}} type='radio' aria-label="Yes" value=1 required>Yes</input>
-  <input name={{name}} type='radio' aria-label="No" value=0 required>No</input>
+  <section class="question">
+    <p>{{question}}</p>
+    <input name={{name}} type='radio' aria-label="Yes" value=1 required>Yes</input>
+    <input name={{name}} type='radio' aria-label="No" value=0 required>No</input>
+  </section>
   {{/each}}
 
   <br>
   <br>
 
-  <input type="submit" aria-label="submit button" />
+  <input class="button" type="submit" aria-label="submit button" />
 
 
 </form>
+

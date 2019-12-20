@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const behaviour = require("./behaviour");
+const deleteUser = require("./deleteUser");
 const error = require("./error");
 
 const parse = require("body-parser");
@@ -57,7 +58,15 @@ router.get("/presents", (req, res) => {
     .catch(err => {
       throw err;
     });
+  console.log("we're getting data4");
 });
+
+router.post("/delete-user", (req, res) => {
+  console.log("we're getting data3");
+  deleteUser.deleteData(name);
+});
+
+// router.get("/delete-user", deleteUser.get);
 
 router.use(error.client);
 router.use(error.server);

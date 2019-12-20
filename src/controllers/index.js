@@ -8,10 +8,9 @@ const index = require("./../model/index");
 const questionsList = index.questions;
 const postData = index.formPost;
 const getData = index.getUsers;
+const home = require("./home");
 
-router.get("/", (req, res) => {
-  res.render("home", { questions: questionsList });
-});
+router.get("/", home);
 
 console.log("I am here");
 

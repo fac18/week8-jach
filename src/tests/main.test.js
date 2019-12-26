@@ -1,11 +1,5 @@
 const test = require("tape");
 const helpers = require("./../views/helpers/index");
-// const app = require("../app");
-
-test("tape is working", t => {
-  t.equal(1, 1, "one should be one");
-  t.end();
-});
 
 test("uppercaseFirstLetter is working as expected", t => {
   t.deepEqual(
